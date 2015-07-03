@@ -15,6 +15,10 @@ public class DinerMenu {
       addItem("Pasta", "Spaghetti with Marinara Sauce, and a slice of sourdough bread", false, 3.89);
    }
 
+   public Iterator createIterator() {
+     return new DinerMenuIterator(menuItems);
+   }
+
    public void addItem(String name, String description, boolean vegetarian, double price) {
       MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
 

@@ -13,6 +13,10 @@ public class PancakeHouseMenu {
       addItem("Waffles", "Waffles with your choice of blueberries or strawberries", true, 3.59);
    }
 
+   public Iterator createIterator() {
+      return new PancakeHouseMenuIterator(menuItems);
+   }
+
    public void addItem(String name, String description, boolean vegetarian, double price) {
       MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
 
